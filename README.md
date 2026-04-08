@@ -1,17 +1,17 @@
-# 🏠 Barmera Building Data Visualization
+# Barmera Building Data Visualization
 
-## 🚀 Overview
+## Overview
 Comprehensive Building Visualization: Our interactive map details different types of buildings in Barmera, such as garages, commercial properties, and residential houses. Interactive Popups: Click on any building on the map to see a popup with its specific type, offering a detailed view of the areaΓÇÖs land use.
 
-## ✨ Key Features
+## Key Features
 - **Structure Typology**: Identifies commercial, residential, and municipal properties.
 - **Land Use Context**: Evaluates the division of zoning allocations locally.
 - **Data Popups**: Clickable elements yielding instantaneous property details.
 
-## 🛠️ Built With
+## Built With
 - **Tech Stack:** Python, Interactive Leaflet/Folium Maps
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 Ensure your local environment is configured securely (e.g. Python 3.8+ or necessary GIS software context).
@@ -27,7 +27,7 @@ Ensure your local environment is configured securely (e.g. Python 3.8+ or necess
    ```
 3. Set up your environment and dependencies as needed.
 
-## 📄 License
+## License
 This project is licensed under the MIT License - see below for details.
 
 ```text
