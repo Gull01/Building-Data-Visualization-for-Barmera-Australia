@@ -1,55 +1,31 @@
-# Barmera Building Data Visualization
+# Building Footprints of Barmera, South Australia
 
-## Overview
-Comprehensive Building Visualization: Our interactive map details different types of buildings in Barmera, such as garages, commercial properties, and residential houses. Interactive Popups: Click on any building on the map to see a popup with its specific type, offering a detailed view of the areaΓÇÖs land use.
+An interactive web map of building footprints in Barmera, a town in the Riverland region of South Australia, built with GeoPandas and Folium. Hover over any building to see its type.
 
-## Key Features
-- **Structure Typology**: Identifies commercial, residential, and municipal properties.
-- **Land Use Context**: Evaluates the division of zoning allocations locally.
-- **Data Popups**: Clickable elements yielding instantaneous property details.
+## What the map shows
 
-## Built With
-- **Tech Stack:** Python, Interactive Leaflet/Folium Maps
+- Building footprint polygons loaded from a shapefile
+- A tooltip with the building type for each footprint
+- Google Satellite imagery plus several other basemaps, switchable from the layer control
+- The map is centred automatically on the mean centroid of all buildings
 
-## Getting Started
+## Run it
 
-### Prerequisites
-Ensure your local environment is configured securely (e.g. Python 3.8+ or necessary GIS software context).
-
-### Installation
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/Gull01/Building-Data-Visualization-for-Barmera-Australia.git
-   ```
-2. Navigate into the project folder:
-   ```bash
-   cd Building-Data-Visualization-for-Barmera-Australia
-   ```
-3. Set up your environment and dependencies as needed.
-
-## License
-This project is licensed under the MIT License - see below for details.
-
-```text
-MIT License
-
-Copyright (c) 2026 Gul Nawaz
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+```bash
+pip install geopandas folium jupyter
+jupyter notebook "Building Data Visualization for Barmera-Australia.ipynb"
 ```
+
+The building shapefile is not included in this repository. Point `shapefile_path` in the first cell to your own copy (the notebook expects a `building` attribute for the tooltip). Building footprints for Australia can be downloaded from OpenStreetMap, for example through [Geofabrik](https://download.geofabrik.de/australia-oceania/australia.html).
+
+Running the notebook saves the map as `aus_building_data_map.html`.
+
+Note: the Stamen basemaps in the notebook are no longer served at their old address. If they fail to load, remove those `TileLayer` lines.
+
+## Built with
+
+Python, GeoPandas, Folium (Leaflet)
+
+## Author
+
+Gul Nawaz. [gulnawaz.dev](https://gulnawaz.dev)
